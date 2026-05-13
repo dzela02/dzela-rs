@@ -967,63 +967,14 @@ a {
   }
 }
 
-/* ---------- Animated background blobs ---------- */
-.bg-blobs {
+/* ---------- Three.js point cloud canvas ---------- */
+.point-cloud-canvas {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
-}
-
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  will-change: transform;
-  filter: blur(60px);
-}
-
-.bg-blob--1 {
-  width: 600px;
-  height: 600px;
-  top: -200px;
-  left: -150px;
-  background: oklch(0.58 0.14 155 / 0.18);
-  animation: blob-drift-1 32s ease-in-out infinite alternate;
-}
-
-.bg-blob--2 {
-  width: 520px;
-  height: 520px;
-  bottom: -160px;
-  right: -120px;
-  background: oklch(0.58 0.14 155 / 0.13);
-  animation: blob-drift-2 44s ease-in-out infinite alternate-reverse;
-}
-
-.theme-dark .bg-blob--1 {
-  background: oklch(0.72 0.16 155 / 0.22);
-}
-.theme-dark .bg-blob--2 {
-  background: oklch(0.72 0.16 155 / 0.16);
-}
-
-@keyframes blob-drift-1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  30%  { transform: translate(220px, 180px) scale(1.12); }
-  65%  { transform: translate(90px, 340px) scale(0.9); }
-  100% { transform: translate(300px, 90px) scale(1.06); }
-}
-
-@keyframes blob-drift-2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  35%  { transform: translate(-190px, -260px) scale(1.18); }
-  75%  { transform: translate(-90px, -160px) scale(0.87); }
-  100% { transform: translate(-230px, -70px) scale(1.1); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg-blob { animation: none; }
 }
 
 /* ---------- 404 page ---------- */

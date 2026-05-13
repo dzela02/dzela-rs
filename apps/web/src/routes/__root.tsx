@@ -2,6 +2,7 @@ import { Outlet, createRootRoute } from '@tanstack/react-router';
 
 import { Footer } from '~/components/footer';
 import { Nav } from '~/components/nav';
+import { PointCloud } from '~/components/point-cloud';
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -10,10 +11,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
-      <div className="bg-blobs" aria-hidden="true">
-        <div className="bg-blob bg-blob--1" />
-        <div className="bg-blob bg-blob--2" />
-      </div>
+      <PointCloud />
       <div className="app">
         <Nav />
         <main className="main">

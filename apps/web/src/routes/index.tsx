@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { AboutTeaser } from '~/components/sections/about-teaser';
 import { Contact } from '~/components/sections/contact';
-import { EmployedBadge } from '~/components/sections/employed-badge';
 import { Hero } from '~/components/sections/hero';
 import { NowBlock } from '~/components/sections/now-block';
 import { ProjectList } from '~/components/sections/project-list';
@@ -19,9 +19,9 @@ function HomePage() {
     <>
       <Hero />
       <NowBlock />
-      <Systems />
       <ProjectList items={PROJECTS} limit={3} cta={{ label: 'All work', to: '/work' }} />
-      <EmployedBadge />
+      <Systems />
+      <AboutTeaser />
       <Contact />
     </>
   );

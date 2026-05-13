@@ -568,51 +568,52 @@ a {
   color: var(--accent-green);
 }
 
-/* ---------- Scroll-driven reveal system ---------- */
-[data-animate] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.52s var(--ease-out),
-    transform 0.52s var(--ease-out);
-}
-[data-animate].is-visible {
-  opacity: 1;
-  transform: none;
-}
-.hero[data-animate] {
-  transition-duration: 0.7s;
-}
-
-[data-animate-stagger] > * {
-  opacity: 0;
-  transform: translateY(12px);
-  transition:
-    opacity 0.4s var(--ease-out),
-    transform 0.4s var(--ease-out);
-}
-[data-animate-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms;   opacity: 1; transform: none; }
-[data-animate-stagger].is-visible > *:nth-child(2) { transition-delay: 60ms;  opacity: 1; transform: none; }
-[data-animate-stagger].is-visible > *:nth-child(3) { transition-delay: 120ms; opacity: 1; transform: none; }
-[data-animate-stagger].is-visible > *:nth-child(4) { transition-delay: 180ms; opacity: 1; transform: none; }
-[data-animate-stagger].is-visible > *:nth-child(n+5) { transition-delay: 240ms; opacity: 1; transform: none; }
-
-@keyframes slide-in {
-  from { opacity: 0; transform: translateY(10px); }
+/* ---------- Page entrance animations — pure CSS, zero JS dependency ---------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: none; }
 }
-.hero.is-visible .hero-status  { animation: slide-in 0.5s var(--ease-out) 0s    both; }
-.hero.is-visible .display      { animation: slide-in 0.6s var(--ease-out) 0.1s  both; }
-.hero.is-visible .lede         { animation: slide-in 0.6s var(--ease-out) 0.22s both; }
-.hero.is-visible .hero-actions { animation: slide-in 0.5s var(--ease-out) 0.34s both; }
-.hero.is-visible .hero-stats   { animation: slide-in 0.5s var(--ease-out) 0.45s both; }
+
+/* Hero children cascade in on load */
+.hero .hero-status  { animation: fade-up 0.45s var(--ease-out) 0.05s  both; }
+.hero .hero-row     { animation: fade-up 0.55s var(--ease-out) 0.14s  both; }
+.hero .lede         { animation: fade-up 0.55s var(--ease-out) 0.26s  both; }
+.hero .hero-actions { animation: fade-up 0.45s var(--ease-out) 0.37s  both; }
+.hero .hero-stats   { animation: fade-up 0.45s var(--ease-out) 0.48s  both; }
+
+/* Each main section fades up in sequence after the hero */
+.main > *:nth-child(2) { animation: fade-up 0.5s var(--ease-out) 0.35s both; }
+.main > *:nth-child(3) { animation: fade-up 0.5s var(--ease-out) 0.48s both; }
+.main > *:nth-child(4) { animation: fade-up 0.5s var(--ease-out) 0.58s both; }
+.main > *:nth-child(5) { animation: fade-up 0.5s var(--ease-out) 0.68s both; }
+.main > *:nth-child(6) { animation: fade-up 0.5s var(--ease-out) 0.78s both; }
+
+/* Project cards stagger within their section */
+.project-list > *:nth-child(1) { animation: fade-up 0.4s var(--ease-out) 0.54s both; }
+.project-list > *:nth-child(2) { animation: fade-up 0.4s var(--ease-out) 0.64s both; }
+.project-list > *:nth-child(3) { animation: fade-up 0.4s var(--ease-out) 0.74s both; }
+
+/* Systems cells stagger */
+.systems-grid > * { animation: fade-up 0.4s var(--ease-out) 0.64s both; }
+.systems-grid > *:nth-child(2) { animation-delay: 0.72s; }
+.systems-grid > *:nth-child(3) { animation-delay: 0.80s; }
+.systems-grid > *:nth-child(4) { animation-delay: 0.88s; }
+
+/* Build list rows stagger */
+.build-row { animation: fade-up 0.4s var(--ease-out) both; }
+.build-row:nth-child(1) { animation-delay: 0.4s; }
+.build-row:nth-child(2) { animation-delay: 0.48s; }
+.build-row:nth-child(3) { animation-delay: 0.56s; }
+.build-row:nth-child(4) { animation-delay: 0.64s; }
+.build-row:nth-child(5) { animation-delay: 0.72s; }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-animate],
-  [data-animate-stagger] > * {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .hero .hero-status, .hero .hero-row, .hero .lede,
+  .hero .hero-actions, .hero .hero-stats,
+  .main > *,
+  .project-list > *, .systems-grid > *,
+  .build-row {
+    animation: none;
   }
 }
 
@@ -662,6 +663,83 @@ a {
   padding: 4px 2px 0;
 }
 
+
+/* ---------- Build list (what I'm working on) ---------- */
+.build-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.build-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background-color var(--duration-base);
+}
+.build-row:last-child {
+  border-bottom: none;
+}
+.build-row:hover {
+  background: var(--bg-2);
+}
+.build-label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--accent-green);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.build-desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--fg-2);
+}
+
+/* ---------- Teaser grid (about snapshot) ---------- */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.teaser-cell {
+  background: var(--bg-1);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.teaser-num {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-green);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.teaser-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+
+@media (max-width: 520px) {
+  .build-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .teaser-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---------- Now card ---------- */
 .now-card {

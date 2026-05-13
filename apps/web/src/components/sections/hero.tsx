@@ -4,7 +4,7 @@ import { Icon } from '../icon';
 
 export function Hero() {
   return (
-    <section className="hero" data-animate>
+    <section className="hero">
       <div className="hero-status">
         <span className="status-dot" /> based in belgrade · senior swe at rivian · open to
         interesting problems

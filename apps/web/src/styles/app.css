@@ -964,3 +964,93 @@ a {
     font-size: 17px;
   }
 }
+
+/* ---------- Animated background blobs ---------- */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  filter: blur(90px);
+}
+
+.bg-blob--1 {
+  width: 560px;
+  height: 560px;
+  top: -180px;
+  left: -180px;
+  background: oklch(0.58 0.12 155 / 0.055);
+  animation: blob-drift-1 32s ease-in-out infinite alternate;
+}
+
+.bg-blob--2 {
+  width: 480px;
+  height: 480px;
+  bottom: -140px;
+  right: -140px;
+  background: oklch(0.58 0.12 155 / 0.04);
+  animation: blob-drift-2 44s ease-in-out infinite alternate-reverse;
+}
+
+.theme-dark .bg-blob--1 {
+  background: oklch(0.72 0.14 155 / 0.07);
+}
+.theme-dark .bg-blob--2 {
+  background: oklch(0.72 0.14 155 / 0.055);
+}
+
+@keyframes blob-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  30%  { transform: translate(220px, 180px) scale(1.12); }
+  65%  { transform: translate(90px, 340px) scale(0.9); }
+  100% { transform: translate(300px, 90px) scale(1.06); }
+}
+
+@keyframes blob-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  35%  { transform: translate(-190px, -260px) scale(1.18); }
+  75%  { transform: translate(-90px, -160px) scale(0.87); }
+  100% { transform: translate(-230px, -70px) scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob { animation: none; }
+}
+
+/* ---------- 404 page ---------- */
+.notfound {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 80px 0 64px;
+}
+
+.notfound-code {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--fg-4);
+}
+
+.notfound-title {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+.notfound-body {
+  font-size: var(--text-base);
+  color: var(--fg-3);
+  max-width: 380px;
+  line-height: var(--leading-prose);
+}

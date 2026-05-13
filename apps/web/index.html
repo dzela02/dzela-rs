@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marko Dželatović — Senior Software Engineer · Visualization &amp; Simulation</title>
+    <meta
+      name="description"
+      content="Marko Dželatović — senior software engineer at Rivian. Visualization, simulation, monorepo platforms, API-first systems."
+    />
+    <script>
+      (function () {
+        var s = localStorage.getItem('theme');
+        if (s === 'dark' || (!s && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('theme-dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

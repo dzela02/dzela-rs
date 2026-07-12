@@ -1,5 +1,11 @@
 # dzela.rs — portfolio v2
 
+[![Deployed on Vercel](https://img.shields.io/badge/deployed-vercel-black?logo=vercel&logoColor=white)](https://dzela.rs)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![pnpm](https://img.shields.io/badge/pnpm-9-F69220?logo=pnpm&logoColor=white)](https://pnpm.io)
+
 Personal portfolio for [Marko Dželatović](https://dzela.rs). The goal was to build something that feels considered rather than generated: hand-rolled CSS, no UI frameworks, content as typed TypeScript constants, and case studies that read like engineering write-ups rather than marketing copy.
 
 ## What this is

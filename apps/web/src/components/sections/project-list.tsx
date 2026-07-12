@@ -13,11 +13,12 @@ interface CTA {
 interface ProjectListProps {
   items: ProjectEntry[];
   title?: string;
+  description?: string;
   limit?: number;
   cta?: CTA;
 }
 
-export function ProjectList({ items, title = 'Selected work', limit, cta }: ProjectListProps) {
+export function ProjectList({ items, title = 'Interesting cases', description, limit, cta }: ProjectListProps) {
   const list = limit ? items.slice(0, limit) : items;
   return (
     <section className="block">
@@ -29,11 +30,12 @@ export function ProjectList({ items, title = 'Selected work', limit, cta }: Proj
           </Link>
         ) : null}
       </header>
+      {description && <p className="block-description">{description}</p>}
       <div className="project-list" data-animate-stagger>
         {list.map((p) => (
           <Link
             key={p.slug}
-            to="/work/$slug"
+            to="/cases/$slug"
             params={{ slug: p.slug }}
             className="card card-hover"
           >

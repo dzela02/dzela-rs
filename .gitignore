@@ -25,6 +25,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Local Claude Code permissions (machine-specific)
+.claude/settings.local.json
+
+# Design scratch files
+design-source/
+
 # Editor / OS
 .DS_Store
 Thumbs.db

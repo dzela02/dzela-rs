@@ -7,23 +7,23 @@ interface SystemItem {
 const SYSTEMS: SystemItem[] = [
   {
     num: '01',
-    title: 'Visualization that respects the frame',
-    body: "Render layers that fail closed. Streaming data shaped at the edge, not the view. WebGL when it earns its keep, DOM when it doesn't.",
+    title: 'Distributed systems that hold',
+    body: 'High-throughput microservices built for enterprise loads. gRPC and REST contracts with strong guarantees. Concurrent, resilient, observable. Go, Python, and Rust for the parts that need to be fast.',
   },
   {
     num: '02',
-    title: 'Monorepos that scale',
-    body: 'Shared packages over duplication. Parallel typed builds. CI that only runs what changed. The system rewards reuse instead of asking nicely for it.',
+    title: 'Kubernetes & worker orchestration',
+    body: 'Container scheduling, EKS operations, and pipeline reliability. Worker orchestration designed for high availability: not just deployed, but recoverable.',
   },
   {
     num: '03',
-    title: 'API-first contracts',
-    body: 'OpenAPI as the source of truth. Orval-generated clients. Frontend and backend speak the same generated types — integration meetings stop being a meeting.',
+    title: 'Data layers that perform',
+    body: 'Relational and NoSQL across PostgreSQL and MongoDB. Schema design that prioritises integrity first, query performance second. No accidental N+1s in production.',
   },
   {
     num: '04',
-    title: 'Type-driven design',
-    body: 'Branded primitives for domain values. Discriminated unions on every state machine. Make impossible states unrepresentable, then let the compiler enforce it.',
+    title: 'Backend meets front-end',
+    body: "When the problem crosses the stack, I cross with it. Clean state-driven interfaces in React when cross-functional delivery requires it, not as identity but as capability.",
   },
 ];
 

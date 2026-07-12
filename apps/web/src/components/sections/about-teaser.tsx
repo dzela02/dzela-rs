@@ -11,16 +11,16 @@ export function AboutTeaser() {
       </header>
       <div className="teaser-grid">
         <div className="teaser-cell">
-          <span className="teaser-num">07</span>
+          <span className="teaser-num">08</span>
           <p className="teaser-body">
-            Years in the JavaScript ecosystem. Started with festival websites, ended up building
-            vehicle simulation tooling. Still enjoying the ride.
+            Years engineering systems. Started with web apps, ended up building distributed
+            infrastructure and vehicle simulation tooling. Still enjoying the ride.
           </p>
         </div>
         <div className="teaser-cell">
           <span className="teaser-num">350+</span>
           <p className="teaser-body">
-            Educational sessions delivered as a Red Cross volunteer — human trafficking prevention,
+            Educational sessions delivered as a Red Cross volunteer on human trafficking prevention,
             schools and communities across Serbia. 8 years running.
           </p>
         </div>
@@ -34,7 +34,7 @@ export function AboutTeaser() {
         <div className="teaser-cell">
           <span className="teaser-num">∞</span>
           <p className="teaser-body">
-            Belief that the hardest problems aren&apos;t always in the code — and that getting
+            Belief that the hardest problems aren&apos;t always in the code, and that getting
             humans to care about something is tougher than any architecture.
           </p>
         </div>

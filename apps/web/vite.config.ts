@@ -7,6 +7,9 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  optimizeDeps: {
+    include: ['highlight.js'],
+  },
   plugins: [
     TanStackRouterVite({
       srcDirectory: 'src',

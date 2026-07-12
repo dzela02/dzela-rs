@@ -30,7 +30,9 @@ export default [
         ...globals.es2022,
       },
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['*.config.js'],
+        },
         tsconfigRootDir: process.cwd(),
       },
     },

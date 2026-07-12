@@ -19,7 +19,7 @@ function HomePage() {
     <>
       <Hero />
       <NowBlock />
-      <ProjectList items={PROJECTS} limit={3} cta={{ label: 'All work', to: '/work' }} />
+      <ProjectList items={PROJECTS} limit={3} cta={{ label: 'All cases', to: '/cases' }} />
       <Systems />
       <AboutTeaser />
       <Contact />

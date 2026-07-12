@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { Icon } from '~/components/icon';
 import { Tag } from '~/components/primitives';
 import { useAnimate } from '~/hooks/use-animate';
 
@@ -9,24 +8,28 @@ export const Route = createFileRoute('/about')({
 });
 
 const STACK = [
+  'go',
+  'python',
+  'rust',
   'typescript',
-  'react',
-  'next.js',
+  'javascript',
+  'kubernetes',
+  'eks',
+  'microservices',
+  'grpc',
+  'rest',
   'nest.js',
+  'react',
   'node.js',
-  'three.js',
-  'webgl',
-  'turborepo',
+  'postgresql',
+  'mongodb',
+  'prisma',
   'redis',
-  'kafka',
   'openapi',
-  'orval',
   'aws',
   'azure',
-  'firebase',
-  'jest',
-  'playwright',
   'github actions',
+  'docker',
 ];
 
 function AboutPage() {
@@ -45,10 +48,10 @@ function AboutPage() {
           </h1>
         </div>
         <p className="lede">
-          Senior software engineer, 7+ years in the JavaScript ecosystem. I build platforms, not
-          features — the kind of work that gives other engineers room to move faster. Visualization
-          tooling, monorepo architectures, API-first systems, CI/CD that fades into the background.
-          Based in Belgrade, currently at Rivian.
+          Senior software engineer with 8+ years specialising in distributed systems, scalable backend
+          architectures, and cloud-native infrastructure. I build the systems that give other
+          engineers room to move faster. Language-agnostic, backend-first, full-stack when the
+          problem demands it. Based in Belgrade, currently at Rivian.
         </p>
       </header>
 
@@ -58,15 +61,16 @@ function AboutPage() {
         </header>
         <div className="prose">
           <p>
-            Most of my best work has been quiet. A monorepo migration nobody noticed because nothing
-            broke. A CI pipeline that gave back an afternoon every release. A type system tight
-            enough that an entire class of bugs stopped being possible.
+            Most of my best work has been quiet. A service migration nobody noticed because nothing
+            broke. A CI pipeline that gave back an afternoon every release. An API contract tight
+            enough that an entire class of integration bugs stopped being possible.
           </p>
           <p>
-            I care about clean architecture, developer experience, and pushing the modern web stack
-            forward without theatre. Frontend for visualization and simulation — interactive 3D,
-            streaming data, frame-budget discipline. Lead TypeScript codebases, drive API-first
-            migrations, automate CI/CD, mentor developers.
+            I design and build high-throughput microservices, optimise complex data layers, and
+            orchestrate containerised workloads at scale. Go, Python, and Rust for the systems that need
+            to hold under load. React and TypeScript when the problem crosses into the front-end.
+            Clean architecture, strong contracts, operational reliability: not as checkboxes, but
+            as defaults.
           </p>
         </div>
       </section>
@@ -78,13 +82,13 @@ function AboutPage() {
         <div className="prose">
           <p>
             Since 2017 I&apos;ve volunteered with the Red Cross as a public presenter on human
-            trafficking prevention — 350+ educational sessions delivered to schools, communities,
+            trafficking prevention, with 350+ educational sessions delivered to schools, communities,
             and institutions across Serbia. Complex topic, sometimes hostile audience, and the goal
             is to leave people knowing something they didn&apos;t before.
           </p>
           <p>
             Before engineering dominated my time, I served as General Secretary and Team Leader at
-            the Youth Association of Ćuprija — organizing programs, coordinating volunteers, and
+            the Youth Association of Ćuprija, organizing programs, coordinating volunteers, and
             learning that getting people to care about something is a harder problem than any
             codebase.
           </p>
@@ -98,14 +102,14 @@ function AboutPage() {
         </header>
         <div className="prose">
           <p>
-            Building robotic AI visualization tooling in the browser — Three.js scenes that make
-            simulation state readable to humans in real time. Alongside that: automating agentic
-            workflows with Claude Code, developing agentic job pipelines, and running AI simulation
-            training clusters.
+            Building robotic AI visualization tooling in the browser, scenes that make simulation
+            state readable to humans in real time. Alongside that: automating engineering workflows
+            with agentic tooling, developing agentic job pipelines, and supporting simulation
+            workloads at scale.
           </p>
           <p>
             Infrastructure side: EKS maintenance and Kubernetes operations. Stack right now is a mix
-            of Go, Python, and React — whatever the problem needs.
+            of Go, Python, Rust, and React, whatever the problem needs.
           </p>
         </div>
       </section>
@@ -125,14 +129,17 @@ function AboutPage() {
         <header className="block-head">
           <h2 className="ds-h2">CV</h2>
         </header>
-        <a
-          className="ext-link"
-          href="/cv/marko-dzelatovic.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download CV (PDF) <Icon name="arrowUR" size={12} />
-        </a>
+        <p className="lede" style={{ fontSize: '14px' }}>
+          Available on request. Reach out via{' '}
+          <a className="ext-link" href="https://www.linkedin.com/in/markodzela/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          {' '}or{' '}
+          <a className="ext-link" href="mailto:contact@dzela.rs">
+            email
+          </a>
+          {' '}and I will send it over.
+        </p>
       </section>
     </article>
   );

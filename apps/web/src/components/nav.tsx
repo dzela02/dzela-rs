@@ -4,7 +4,7 @@ import { ThemeToggle } from './theme-toggle';
 
 const ITEMS: { to: string; label: string }[] = [
   { to: '/', label: 'Home' },
-  { to: '/work', label: 'Work' },
+  { to: '/cases', label: 'Cases' },
   { to: '/about', label: 'About' },
 ];
 

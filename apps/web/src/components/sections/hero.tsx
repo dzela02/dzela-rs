@@ -12,9 +12,8 @@ export function Hero() {
       <div className="hero-row">
         <div className="hero-text">
           <h1 className="display">
-            Marko Dželatović. <span className="display-accent">Senior Software Engineer</span> on
-            Rivian&apos;s visualization &amp; simulation team — building browser-native tools for
-            vehicle engineering.
+            Marko Dželatović. <span className="display-accent">Senior Software Engineer</span>{' '}
+            building distributed systems and cloud-native infrastructure, currently at Rivian.
           </h1>
         </div>
         <div className="avatar" aria-hidden="true">
@@ -22,13 +21,13 @@ export function Hero() {
         </div>
       </div>
       <p className="lede">
-        7+ years in the JavaScript ecosystem. i ship platforms, not features — visualization apps,
-        monorepo unifications, OpenAPI-first backends, CI/CD that fades into the background. React,
-        Next.js, Nest.js, TypeScript.
+        Backend-first, language-agnostic. I design distributed systems, scalable microservices, and
+        cloud-native infrastructure, and wire in the front-end when the problem calls for it. Go
+        Python, and Rust for the heavy lifting, React when it crosses the stack.
       </p>
       <div className="hero-actions">
-        <Link to="/work" className="btn btn-primary btn-md">
-          Selected work <Icon name="arrow" size={14} />
+        <Link to="/cases" className="btn btn-primary btn-md">
+          Case studies <Icon name="arrow" size={14} />
         </Link>
         <Link to="/about" className="btn btn-ghost btn-md">
           About
@@ -36,16 +35,16 @@ export function Hero() {
       </div>
       <div className="hero-stats">
         <div className="stat">
-          <strong>7+ yrs</strong>
-          <span>in the js ecosystem</span>
+          <strong>8+ yrs</strong>
+          <span>engineering systems</span>
         </div>
         <div className="stat">
-          <strong>any-free</strong>
-          <span>strict ts since 2020</span>
+          <strong>go · py · rs · ts</strong>
+          <span>core languages</span>
         </div>
         <div className="stat">
           <strong>350+</strong>
-          <span>red cross sessions delivered</span>
+          <span>red cross sessions</span>
         </div>
       </div>
     </section>

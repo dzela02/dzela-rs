@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm --filter @portfolio/web build",
+  "outputDirectory": "apps/web/dist",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

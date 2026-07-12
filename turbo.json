@@ -7,12 +7,12 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".output/**", ".vinxi/**", "build/**", ".next/**"],
-      "env": ["VITE_*", "STRAPI_*", "ANTHROPIC_API_KEY"]
+      "env": ["VITE_*"]
     },
     "dev": {
       "cache": false,
       "persistent": true,
-      "env": ["VITE_*", "STRAPI_*", "ANTHROPIC_API_KEY"]
+      "env": ["VITE_*"]
     },
     "lint": {
       "dependsOn": ["^build"],

@@ -15,9 +15,9 @@
   "dependencies": {
     "@portfolio/ui": "workspace:*",
     "@tanstack/react-router": "^1.167.0",
+    "highlight.js": "^11.11.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "three": "^0.184.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@portfolio/eslint-config": "workspace:*",
@@ -26,7 +26,6 @@
     "@tanstack/router-plugin": "^1.167.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@types/three": "^0.184.1",
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",
